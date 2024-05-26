@@ -1,0 +1,44 @@
+
+
+header nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 20px;
+}
+
+#logo{
+    height: 40px;
+}
+
+header nav img{
+    height: 25px;
+}
+
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+}
+
+h3 , p{
+    margin: 6px 0;
+}
+
+header{
+    box-shadow: 0 3px 5px rgb(0, 0, 0, 0.104);
+    padding: 10px 0;
+    margin-bottom: 10px;
+}
+
+
+
+
+
+
+footer{
+    margin-top: auto;
+    box-shadow: 0 -3px 5px rgb(0, 0, 0, 0.104);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

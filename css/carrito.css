@@ -1,0 +1,18 @@
+#productos-container{
+    width: 500px;
+    margin: auto;
+}
+
+.ficha-producto{
+    display: flex;
+    gap: 20px;
+}
+
+.ficha-producto img{
+    height: 100px;
+    aspect-ratio: 1.2;
+}
+
+.ficha-producto h3{
+    width: 130px;
+}
