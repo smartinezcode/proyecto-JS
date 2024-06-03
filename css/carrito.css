@@ -16,3 +16,8 @@
 .ficha-producto h3{
     width: 130px;
 }
+
+#totales, #carrito-vacio{
+    text-align: center;
+  }
+

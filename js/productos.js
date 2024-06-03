@@ -17,4 +17,22 @@ const comidas = [
         precio: 160,
         img: "img",        
     },
+    {
+        id:4,
+        nombre: "Hamburguesa",
+        precio: 170,
+        img: "img",       
+    },
+    {
+        id:5,
+        nombre: "Hamburguesa con queso",
+        precio: 200,
+        img: "img",        
+    },
+    {
+        id:6,
+        nombre: "Hamburguesa super",
+        precio: 250,
+        img: "img",        
+    },
 ]

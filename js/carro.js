@@ -1,3 +1,5 @@
+const cuentaCarritoElement = document.getElementById("cuenta-carrito");
+
 function agregarAlCarrito(producto) {
     const memoria = JSON.parse(localStorage.getItem("comidas"));
     console.log(memoria);
@@ -28,7 +30,7 @@ function restarAlCarrito(producto) {
     const memoria = JSON.parse(localStorage.getItem("comidas"));
     const indiceProducto = memoria.findIndex(comidas => comidas.id === producto.id);
     if (memoria[indiceProducto].cantidad === 1) {
-        memoria.splice[indiceProducto, 1];
+        memoria.splice(indiceProducto, 1);
     } else {
         memoria[indiceProducto].cantidad--;
     }
@@ -46,9 +48,13 @@ function getNuevoProductoParaMemoria(producto) {
 const cuentaCarritoTotal = document.getElementById("cuenta-carrito")
 
 function actualizaNumeroCarrito() {
+    let cuenta = 0;
     const memoria = JSON.parse(localStorage.getItem("comidas"));
-    const cuenta = memoria.reduce((acum, current) => acum + current.cantidad, 0);
-    cuentaCarritoTotal.innerText = cuenta;
+    if(memoria && memoria.length > 0){
+    cuenta = memoria.reduce((acum, current) => acum + current.cantidad, 0);
+    return cuentaCarritoElement.innerText = cuenta;
+    }
+    cuentaCarritoElement.innerText = 0;
 }
 
 actualizaNumeroCarrito();

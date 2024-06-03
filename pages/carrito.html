@@ -6,8 +6,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="../css/styles.css">
 	<link rel="stylesheet" href="../css/carrito.css">
-	<script src="../js/carrito.js" defer></script>
+	<script src="../js/productos.js"></script>
 	<script src="../js/carro.js" defer></script>
+	<script src="../js/carrito.js" defer></script>
+	
 	<title>Pedido Restaurante - Carrito</title>
 </head>
 
@@ -22,10 +24,10 @@
 		</nav>
 	</header>
 	<main>
-		<p> Aun no hay productos en el carrito</p>
+		<p id="carrito-vacio"> Aun no hay productos en el carrito. <a href="../index.html">Agregar productos</a></p>
 		<section id="productos-container"></section>
 		<section id="totales">
-			<p>Total unidades: <span id="unidades">0</span></p>
+			<p>Total unidades: <span id="cantidad">0</span></p>
 			<p>Total precio: $<span id="precio">0</span></p>
 			<button disabled>Comprar</button>
 		</section>

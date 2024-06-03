@@ -1,6 +1,8 @@
 const contenedorMenu = document.getElementById("productos-container");
-const unidadesElement = document.getElementById("unidades");
+const cantidadElement = document.getElementById("cantidad");
 const precioElement = document.getElementById("precio");
+const carritoVacioElement = document.getElementById("carrito-vacio");
+const totalesElement = document.getElementById("totales");
 
 function crearFichasProductos() {
     contenedorMenu.innerHTML = "";
@@ -43,17 +45,29 @@ crearFichasProductos();
 actualizarTotales();
 
 
+
 function actualizarTotales() {
     const productos = JSON.parse(localStorage.getItem("comidas"));
-    let unidades = 0;
+    let cantidad = 0;
     let precio = 0;
     if (productos && productos.length > 0) {
-        productos.forEach(producto => {
-            unidades += producto.cantidad;
+        productos.forEach((producto) => {
+            cantidad += producto.cantidad;
             precio += producto.precio * producto.cantidad;
-        })
-        unidadesElement.innerText = unidades;
-        precioElement.innerText = precio;
-
+        });
+        cantidadElement.innerText = cantidad;
+    precioElement.innerText = precio;
     }
+    
+    revisarMensajeVacio();
 }
+
+
+
+function revisarMensajeVacio() {
+    const productos = JSON.parse(localStorage.getItem("comidas"));
+    carritoVacioElement.classList.toggle("escondido", productos && productos.length > 0);
+    totales.classList.toggle("escondido", !(productos && productos.length > 0));
+}
+
+revisarMensajeVacio();
