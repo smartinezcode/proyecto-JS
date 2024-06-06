@@ -2,7 +2,6 @@ const cuentaCarritoElement = document.getElementById("cuenta-carrito");
 
 function agregarAlCarrito(producto) {
     const memoria = JSON.parse(localStorage.getItem("comidas"));
-    console.log(memoria);
     let cuenta = 0;
     if (!memoria) {
         const nuevoProducto = getNuevoProductoParaMemoria(producto);
@@ -10,7 +9,6 @@ function agregarAlCarrito(producto) {
         cuenta = 1;
     } else {
         const indiceProducto = memoria.findIndex(comidas => comidas.id === producto.id);
-        console.log(indiceProducto);
         const nuevaMemoria = memoria;
         if (indiceProducto === -1) {
             nuevaMemoria.push(getNuevoProductoParaMemoria(producto));

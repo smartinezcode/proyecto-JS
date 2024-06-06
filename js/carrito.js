@@ -3,11 +3,11 @@ const cantidadElement = document.getElementById("cantidad");
 const precioElement = document.getElementById("precio");
 const carritoVacioElement = document.getElementById("carrito-vacio");
 const totalesElement = document.getElementById("totales");
+const buttonElement = document.getElementById("boton-comprar");
 
 function crearFichasProductos() {
     contenedorMenu.innerHTML = "";
     const productos = JSON.parse(localStorage.getItem("comidas"));
-    console.log(productos)
     if (productos && productos.length > 0) {
         productos.forEach(producto => {
             const nuevoMenu = document.createElement("div");
@@ -56,9 +56,9 @@ function actualizarTotales() {
             precio += producto.precio * producto.cantidad;
         });
         cantidadElement.innerText = cantidad;
-    precioElement.innerText = precio;
+        precioElement.innerText = precio;
     }
-    
+
     revisarMensajeVacio();
 }
 
@@ -71,3 +71,4 @@ function revisarMensajeVacio() {
 }
 
 revisarMensajeVacio();
+

@@ -17,7 +17,29 @@
     width: 130px;
 }
 
-#totales, #carrito-vacio{
+#totales, #carrito-vacio {
     text-align: center;
   }
 
+ p a {
+    color: rgb(205, 23, 32);
+    text-decoration: none;
+  }
+
+ p a:hover {
+    text-decoration-line: underline;
+ } 
+
+ span.cantidad {
+    color: rgb(205, 23, 32);
+ }
+
+ main button{
+    font-size: larger;
+    background-color: rgb(205, 23, 32);
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: rgb(255, 255, 255);
+    border:unset;
+    cursor:pointer;
+  }
